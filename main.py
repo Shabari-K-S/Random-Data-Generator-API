@@ -64,3 +64,8 @@ def generate_data(
             result.append(faker.ipv4())
 
     return DataResponse(data_type=type, generated_items=result)
+
+
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
